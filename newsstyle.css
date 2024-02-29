@@ -1,4 +1,8 @@
 /* 새로운 CSS 코드 추가 */
+.container{
+    position: relative;
+}
+
 .card {
     width: 100%;
     height: 22em;
@@ -6,6 +10,7 @@
     background-color: white;
     transition: transform 0.3s ease;
 }
+
 
 .card:hover {
     transform: scale(1.15); /* 호버 시에 카드를 약간 확대합니다. */
@@ -27,9 +32,95 @@
     background-color: none;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+}
+
+.card-body {
+    background-color: transparent; /* 배경색을 투명하게 설정합니다. */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn {
+    font-size: 15px;
+}
+
+.col-md-2:nth-child(n+7) {
+    display: none; /* 7번째부터 숨김 */
+}
+
+#sliderControls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10em;
+    display: flex; /* 버튼을 가로로 나란히 배치하기 위해 Flexbox를 사용합니다. */
+    justify-content: space-between; /* 버튼 사이의 간격을 최대한 벌립니다. */
+    width: 100%;
+}
+
+#prevBtn {
+    position: relative;
+    right: 30px; /* 왼쪽으로 10px 이동 */
+}
+
+#nextBtn {
+    position: relative;
+    left: 30px; /* 오른쪽으로 10px 이동 */
+}
+
+
+#prevBtn,
+#nextBtn {
+    /* 기존 스타일 유지 */
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex; /* 요소를 플렉스 박스로 설정하여 내부 요소를 가운데 정렬합니다. */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    position: relative;
+    z-index: 9999;
+    opacity: 0.6;
+    font-weight: bold;
+    padding: 0px;
+}
+#prevBtn::before,
+#nextBtn::before {
+    content: ''; /* 가상 요소를 추가하여 버튼 내부에 아이콘을 대신합니다. */
+    position: absolute;
+    top: 50%; /* 부모 요소의 상단 기준으로 수직 가운데 정렬 */
+    left: 50%; /* 부모 요소의 왼쪽 기준으로 수평 가운데 정렬 */
+    transform: translate(-50%, -55%); /* 수직과 수평 가운데 정렬 */
+    font-size: 24px; /* 아이콘 크기 조정 */
+}
+
+
+#prevBtn::before {
+    content: '<'; /* 왼쪽 화살표 표시 */
+    font-size: 40px;
+}
+
+#nextBtn::before {
+    content: '>'; /* 오른쪽 화살표 표시 */
+    font-size: 40px;
+}
+
+
+
+#prevBtn:hover,
+#nextBtn:hover{
+    background-color: lightgrey;
 
 }
 
-.btn {
-    font-size: 15px;
+
+#prevBtn {
+    margin-right: auto; /* 왼쪽에 붙이도록 설정합니다. */
+}
+
+#nextBtn {
+    margin-left: auto; /* 오른쪽에 붙이도록 설정합니다. */
 }
