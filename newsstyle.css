@@ -1,0 +1,35 @@
+/* 새로운 CSS 코드 추가 */
+.card {
+    width: 100%;
+    height: 22em;
+    padding: 0.5em;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.15); /* 호버 시에 카드를 약간 확대합니다. */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px; /* 그림자를 더 크게 만듭니다. */
+    z-index: 1; /* 다른 요소 위에 나타나도록 설정합니다. */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 13em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-title {
+    font-size: 15px; /* 타이틀의 폰트 크기를 16px로 설정합니다. */
+}
+
+.card-body {
+    background-color: none;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.btn {
+    font-size: 15px;
+}
